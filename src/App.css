@@ -21,6 +21,9 @@
 .btn-blue{
   background-color:rgb(78, 127, 232);
   color: white;
+  margin-left: 15px;
+  width: 200px;
+  
 }
 .btn-normal{
   background-color:rgb(255, 255, 255);

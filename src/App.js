@@ -6,7 +6,7 @@ import List from './List';
 function App() {
   return (
     <div className="app">
-      <Menu nombre="JoSaCo" />
+      <Menu title="Amozon" />
       <List />
     </div>
   );

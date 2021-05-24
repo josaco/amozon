@@ -74,3 +74,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Error from chokidar in Ubuntu :
+
+I solved this way
+https://code.visualstudio.com/docs/setup/linux
+"Visual Studio Code is unable to watch for file changes in this large workspace" (error ENOSPC)#
+
+cat /proc/sys/fs/inotify/max_user_watches
+
+fs.inotify.max_user_watches=524288
+
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
