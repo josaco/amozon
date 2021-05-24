@@ -1,3 +1,9 @@
+#AMOZON SEARCH APP ON REACTJS
+
+Esto está extraído de un videotutorial de Vida MRR en el link :
+
+https://www.youtube.com/watch?v=eXSP524SBgw
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
