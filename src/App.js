@@ -27,7 +27,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="app">
-        <Menu title="Amozon" />
+        <Menu title="VUELOS" />
         <List items={this.state.books}/>
       </div>
     );

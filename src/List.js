@@ -1,4 +1,5 @@
 import React from 'react';
+import Item from './Item';
 
 function List(props){
     return(
@@ -6,11 +7,16 @@ function List(props){
         // Como en App.js añadimos la prop items a List con un arreglo de los libros, con this.state.books ( solo de lectura )
         // Ahora con la función ECMAscript map, que mapea los arreglos contenidos en props.items mostramos con la función declarativa
         // JSX todos los item.title del arreglo
-        
+
         <div className="list">
             {
                 props.items.map( item=>
-                    <div>{item.title}</div>
+                    <Item
+                        key={item.id}
+                        id={item.id}
+                        title={item.title}
+                        image={item.image}
+                        rating={item.rating} />
                 )
             }
         </div>
