@@ -20,6 +20,10 @@ class Menu extends React.Component{
         this.setState({newItemPanel: true});
         console.log('mensaje');
     }
+
+    onCancel = () => {
+        this.setState({newItemPanel: false});
+    }
     
     render(){
         return(
@@ -39,7 +43,7 @@ class Menu extends React.Component{
                 </div>
                 {
                     (this.state.newItemPanel)?
-                    <PanelAdd />
+                    <PanelAdd oncancel={this.onCancel} />
                     :
                     ''
                 }
