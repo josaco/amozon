@@ -15,7 +15,7 @@ class App extends React.Component {
 
     this.state = {
       books:[
-        {id:0, rating: 4, title: 'Vuelo en el río Júcar - Casas abandonadas', image: 'jucacasa.jpg' },
+        {id:0, rating: 4, title: 'Río Júcar', image: 'jucacasa.jpg' },
         {id:1, rating: 3, title: 'Cinemático variado', image: 'cinevar.jpg' },
         {id:2, rating: 5, title: 'Circuito la Torrecica', image: 'torrecica.jpg' },
         {id:3, rating: 5, title: 'Vuelos en la Playa', image: 'playa.jpg' },

@@ -1,25 +1,52 @@
 import React from 'react';
 import Search from './Search';
+import PanelAdd from './PanelAdd';
 import './Menu.css';
 
-function Menu(props){
-    return(
-        <div className="container">
-            <div className="subcontainer">
-                <div className="logo">
-                    {props.title}
-                </div>
+class Menu extends React.Component{
+    
+    //Necesitamos hacer un binding para asignar el alcance de nuestro método con nuestra clase, si no, dará error al pulsar en
+    //añadir nueva colección.básicamente es la línea 15. O también se puede usar una función de flecha....
 
-                <div className="search">
-                    <Search />
-                </div>
+    constructor(props){
+        super(props);
 
-                <div className="actions">
-                    <button className="button btn-blue">+ Añadir nueva colección</button>
-                </div>  
+        this.state = {newItemPanel: false};
+        //this.add = this.add.bind(this);
+    }
+
+    
+    add = () =>{
+        this.setState({newItemPanel: true});
+        console.log('mensaje');
+    }
+    
+    render(){
+        return(
+            <div className="container">
+                <div className="subcontainer">
+                    <div className="logo">
+                        {this.props.title}
+                    </div>
+    
+                    <div className="search">
+                        <Search />
+                    </div>
+    
+                    <div className="actions">
+                        <button onClick={this.add} className="button btn-blue">+ Añadir nueva colección</button>
+                    </div>  
+                </div>
+                {
+                    (this.state.newItemPanel)?
+                    <PanelAdd />
+                    :
+                    ''
+                }
+                
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Menu;
