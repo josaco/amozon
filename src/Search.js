@@ -1,10 +1,21 @@
 import React from 'react';
 
-function Search(props){
+class Search extends React.Component{
 
-    return(
-        <input type="text" />
-    );
+    constructor(props){
+        super(props);
+    }
+
+    onChangeEvent = e => {
+        const query = e.target.value.toString().toLowerCase();
+        this.props.onsearch(query);
+    }
+
+    render(){
+        return(
+            <input type="text" onChange={this.onChangeEvent} />
+        );
+    }
     
 }
 
